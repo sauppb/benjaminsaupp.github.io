@@ -11,48 +11,76 @@ body {
 /* styles.css */
 
 /* Header styles */
+/* styles.css */
+
+/* Header styles */
 header {
     background-color: #333;
     color: #fff;
 }
 
-.title-bar {
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Stick to the top */
+    left: 0;
+    right: 0;
+    z-index: 100; /* Ensure it's on top of other content */
+}
+
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.title-bar h1 {
+.navbar h1 {
     margin: 0;
     font-size: 24px;
 }
 
 /* Navigation menu styles */
-nav ul {
+.navbar ul {
     list-style: none;
     padding: 0;
     display: flex;
 }
 
-nav li {
+.navbar li {
     margin-right: 20px;
 }
 
-nav a {
+.navbar a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
 }
 
-nav a:hover {
+.navbar a:hover {
     text-decoration: underline;
 }
+
+/* Add padding to the body to account for the fixed navbar */
+body {
+    padding-top: 80px; /* Adjust as needed based on your navbar height */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 
 
 section {
     margin: 20px;
     padding: 20px;
+    width: 300px;
+    /* height: 250px; */
+    height: fit-content;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
