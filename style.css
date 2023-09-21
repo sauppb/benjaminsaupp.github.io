@@ -32,11 +32,12 @@ header {
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content:  space-between;
     align-items: center;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 120000px;
+    height: 20px;
+    margin: 0 0;
 }
 
 .navbar h1 {
@@ -69,18 +70,27 @@ header {
 body {
     padding-top: 80px; /* Adjust as needed based on your navbar height */
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    /* align-items: start; */
+    flex-wrap: nowrap;
 }
 
 
+@media screen and (max-width: 600px) {
+    body {
+        flex-wrap: wrap; /* Wrap when the window width is less than 600px */
+    }
+}
 
 
 section {
-    margin: 20px;
+    margin: 0px;
+    padding-top: 10px;
     padding: 20px;
-    width: 300px;
-    /* height: 250px; */
-    height: fit-content;
+    width: 350px;
+    height: 350px;
+    /* height: fit-content; */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -113,4 +123,20 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+#jmuImage{
+    margin-bottom: -70px;
+    margin-top: -50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.flex-item {
+    width: 400px; /* Adjust the width as needed */
+    margin: 10px;
 }
